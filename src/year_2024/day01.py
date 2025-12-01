@@ -17,8 +17,8 @@ def solve_part2(input_data: str) -> int:
     left_column = [pair[0] for pair in pairs]
     right_column = [pair[1] for pair in pairs]
 
-    similarity_score = []
-    for number in left_column:
-        count = right_column.count(number)
-        similarity_score.append(number * count)
+    similarity_score = [number * right_column.count(number) for number in left_column]
+    # for number in left_column:
+    #     count = right_column.count(number)
+    #     similarity_score.append(number * count)
     return sum(similarity_score)
