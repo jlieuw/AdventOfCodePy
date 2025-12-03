@@ -28,9 +28,6 @@ def solve_part2(input_data: str) -> int:
             str_i = str(i)
             match = re.match(r'^(.+?)\1+$', str_i)
             if match:
-                pattern = match.group(1)
-                count = len(str_i) // len(pattern)
-                if count > 1:
                     invalid_ids.append(i)
 
 
